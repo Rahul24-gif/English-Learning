@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Learning App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>English Learning App</h1>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <em>Enable Dark Mode!</em>
+            </div>
+        </header>
+        <main>
+            <section id="login-screen" class="screen active">
+                <h2>Login / Register</h2>
+                <form id="login-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <label for="dob">Year of Birth:</label>
+                    <input type="number" id="dob" min="1900" max="2025" required>
+                    <button type="submit">Enter</button>
+                </form>
+            </section>
+
+            <section id="dashboard-screen" class="screen">
+                <h2 id="greeting"></h2>
+                <p>Daily Goal: <span id="daily-goal"></span></p>
+                <p>Streak: <span id="streak"></span> days</p>
+                <p>Overall Progress: <span id="overall-progress"></span>%</p>
+                <p>Last Completed Lesson: <span id="last-lesson"></span></p>
+                <button id="resume-button">Resume Learning</button>
+            </section>
+
+            <section id="modules-section" class="screen">
+                <h2>Learning Modules</h2>
+                <button id="story-reading-btn">Story Reading</button>
+                <button id="pronunciation-btn">Pronunciation Practice</button>
+                <button id="grammar-btn">Grammar Games</button>
+                <button id="vocabulary-btn">Vocabulary Builder</button>
+            </section>
+
+            <section id="story-reading-screen" class="screen">
+                <h2>Story Reading</h2>
+                <div id="story-content"></div>
+                <button id="read-aloud-btn">Read Aloud</button>
+                <button id="next-story-btn">Next Story</button>
+                <button id="back-to-modules-btn-story">Back to Modules</button>
+            </section>
+
+            <section id="pronunciation-screen" class="screen">
+                <h2>Pronunciation Practice</h2>
+                <p id="target-word"></p>
+                <button id="start-recording-btn">Start Recording</button>
+                <button id="stop-recording-btn" disabled>Stop Recording</button>
+                <p id="pronunciation-feedback"></p>
+                <button id="back-to-modules-btn-pronunciation">Back to Modules</button>
+            </section>
+
+            <section id="grammar-screen" class="screen">
+                <h2>Grammar Games</h2>
+                <div id="grammar-game-content"></div>
+                <button id="back-to-modules-btn-grammar">Back to Modules</button>
+            </section>
+
+            <section id="vocabulary-screen" class="screen">
+                <h2>Vocabulary Builder</h2>
+                <div id="vocabulary-word"></div>
+                <div id="vocabulary-meaning"></div>
+                <div id="vocabulary-example"></div>
+                <img id="vocabulary-image" src="" alt="Vocabulary Image" style="max-width: 200px;">
+                <button id="pronounce-word-btn">Pronounce</button>
+                <button id="next-word-btn">Next Word</button>
+                <button id="back-to-modules-btn-vocabulary">Back to Modules</button>
+            </section>
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
